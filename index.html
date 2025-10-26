@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Image Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>My Image Gallery</h1>
+    <div class="filter-buttons">
+      <button class="active" onclick="filterImages('all')">All</button>
+      <button onclick="filterImages('nature')">Nature</button>
+      <button onclick="filterImages('city')">City</button>
+      <button onclick="filterImages('animals')">Animals</button>
+    </div>
+  </header>
+
+  <div class="gallery">
+    <div class="gallery-item nature">
+      <img src="pic3.jpg" alt="Nature">
+    </div>
+    <div class="gallery-item city">
+      <img src="pic2.jpg" alt="City">
+    </div>
+    <div class="gallery-item animals">
+      <img src="pic4.jpg" alt="Animals">
+    </div>
+    <div class="gallery-item nature">
+      <img src="pic6.jpg" alt="Nature">
+    </div>
+    <div class="gallery-item city">
+      <img src="pic9.jpg" alt="City">
+    </div>
+    <div class="gallery-item animals">
+      <img src="pic00.jpg" alt="Animals">
+    </div>
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-img" src="" alt="Large view">
+    <button class="prev" onclick="changeImage(-1)">&#10094;</button>
+    <button class="next" onclick="changeImage(1)">&#10095;</button>
+  </div>
+
+  <footer>
+    <button id="filterToggle">Toggle Filter (Grayscale)</button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
